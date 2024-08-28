@@ -1,0 +1,8 @@
+build
+mypy
+mock
+pytest
+pytest-cov
+pytest-asyncio
+pylint
+ruff

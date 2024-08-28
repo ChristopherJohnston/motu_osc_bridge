@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+import asyncio
+from motu_osc_bridge import server
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(
+        prog='motu_osc_bridge',
+        description="Run the AVB OSC bridge server"
+    )
+    parser.add_argument('servicename', type=str, help="The ZeroConf name of the OSC Server to connect to.")
+    parser.add_argument('--avbserver', type=str, help="The url of the MOTU AVB server")
+    
+    parser.set_defaults(avbserver="http://localhost:8888")
+    args = parser.parse_args()
+
+    asyncio.run(server.main(args.servicename, args.avbserver))
+
+if __name__ == '__main__':
+    main()
+    
