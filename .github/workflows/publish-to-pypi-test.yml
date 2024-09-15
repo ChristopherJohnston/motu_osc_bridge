@@ -26,7 +26,7 @@ jobs:
           pip install -U -r requirements-dev.txt
       - name: Run tests with pytest
         run: |
-          pytest --cache-clear --cov=motu_server > pytest-coverage.txt
+          pytest --cache-clear --cov=motu_osc_bridge > pytest-coverage.txt
       - name: Comment Coverage
         uses: coroo/pytest-coverage-commentator@v1.0.2
   update_release_draft:
