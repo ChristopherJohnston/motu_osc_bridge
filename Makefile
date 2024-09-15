@@ -15,7 +15,7 @@ mypy: $(MYPY_DIRS)
 
 .PHONY: test
 test:
-	pytest --cov ${SRC_DIR}/tests -v -s ${SRC_DIR}/tests
+	pytest --cov=motu_osc_bridge -v -s ${SRC_DIR}/tests
 
 .PHONY: install
 install:
