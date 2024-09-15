@@ -8,7 +8,7 @@ def main():
         prog='motu_osc_bridge',
         description="Run the AVB OSC bridge server"
     )
-    parser.add_argument('servicename', type=str, help="The ZeroConf name of the OSC Server to connect to.")
+    parser.add_argument('servicename', type=str, help="The ZeroConf name of the OSC Server to connect to. e.g iPhone [iPhone] (TouchOSC)")
     parser.add_argument('--avbserver', type=str, help="The url of the MOTU AVB server")
     
     parser.set_defaults(avbserver="http://localhost:8888")

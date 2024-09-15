@@ -1,7 +1,7 @@
 import asyncio
 import logging
 from typing import Optional, Any, cast
-from motu_osc_bridge.datastore_client import DatastoreClient
+from motu_datastore_client import DatastoreClient
 from zeroconf import IPVersion, Zeroconf, ServiceStateChange
 from zeroconf.asyncio import AsyncServiceBrowser, AsyncServiceInfo, AsyncZeroconf
 from pythonosc import udp_client

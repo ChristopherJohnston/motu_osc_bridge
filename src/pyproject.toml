@@ -1,3 +1,30 @@
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "motu_osc_bridge"
+version = "0.1.0"
+description = "A service to bridge HTTP messages from a MOTU AVB interface's datastore API to an OSC Server, such as TouchOSC."
+readme = "README.md"
+authors = [{ name = "Christopher Johnston", email = "christopher_johnston@me.com" }]
+license = { file = "LICENSE" }
+dependencies = [
+    "aiohappyeyeballs",
+    "aiohttp",
+    "aiosignal",
+    "asyncio",
+    "motu_datastore_client",
+    "python-osc",
+    "zeroconf"
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["motu", "avb", "osc"]
+requires-python = ">=3.11"
+
+[project.urls]
+Homepage = "https://github.com/ChristopherJohnston/motu_osc_bridge"
