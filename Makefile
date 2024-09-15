@@ -17,7 +17,15 @@ mypy: $(MYPY_DIRS)
 test:
 	pytest --cov ${SRC_DIR}/tests -v -s ${SRC_DIR}/tests
 
+.PHONY: install
+install:
+	python -m pip install -U -r requirements.txt
+	
 .PHONY: develop
-develop:
+develop: install
 	python -m pip install --editable ${SRC_DIR}
 	python -m pip install -U -r requirements-dev.txt
+
+.PHONY: build
+build: develop
+	python -m build ./src

@@ -1,0 +1,28 @@
+name: Run Tests in PR
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Python 3
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.11
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ./src
+          pip install -r requirements.txt
+          pip install -U -r requirements-dev.txt
+      - name: Run tests with pytest
+        run: |
+          pytest --cache-clear --cov=motu_server > pytest-coverage.txt
+      - name: Comment Coverage
+        uses: coroo/pytest-coverage-commentator@v1.0.2
