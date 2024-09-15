@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "motu_osc_bridge"
-version = "0.1.0"
+version = "0.1.1"
 description = "A service to bridge HTTP messages from a MOTU AVB interface's datastore API to an OSC Server, such as TouchOSC."
 readme = "README.md"
 authors = [{ name = "Christopher Johnston", email = "christopher_johnston@me.com" }]
