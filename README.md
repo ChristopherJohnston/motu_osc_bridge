@@ -1,3 +1,5 @@
+
+
 # MOTU AVB Websocket Bridge
 
 A service to bridge HTTP messages from a MOTU AVB interface's datastore API to an OSC Server, such as TouchOSC.
@@ -6,6 +8,8 @@ A service to bridge HTTP messages from a MOTU AVB interface's datastore API to a
 * For OSC Reference, see [MOTU AVB OSC Reference](https://cdn-data.motu.com/downloads/audio/AVB/docs/OSC%20Quick%20Reference.pdf)
 
 # Usage
+
+Requires Python 3.11 or later.
 
 In the command line at the project root, run:
 
